@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="LINQCajeros">
+  <DataContextMoniker Name="/LINQCajerosDataContext" />
+  <nestedChildShapes>
+    <classShape Id="d0978a13-c1d8-42ef-be66-91c0416a0ab6" absoluteBounds="2.5, 1.875, 2, 1.3862939453125">
+      <DataClassMoniker Name="/LINQCajerosDataContext/Cajero" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f16861da-a578-4d86-bacf-845ba3a3c2ee" absoluteBounds="2.515, 2.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,11 @@
+C:\Users\Nicolás\source\repos\Evaluacion2NuevaNET\bin\Debug\Evaluacion2NuevaNET.exe.config
+C:\Users\Nicolás\source\repos\Evaluacion2NuevaNET\bin\Debug\Evaluacion2NuevaNET.exe
+C:\Users\Nicolás\source\repos\Evaluacion2NuevaNET\bin\Debug\Evaluacion2NuevaNET.pdb
+C:\Users\Nicolás\source\repos\Evaluacion2NuevaNET\obj\Debug\Evaluacion2NuevaNET.csprojAssemblyReference.cache
+C:\Users\Nicolás\source\repos\Evaluacion2NuevaNET\obj\Debug\Evaluacion2NuevaNET.Properties.Resources.resources
+C:\Users\Nicolás\source\repos\Evaluacion2NuevaNET\obj\Debug\Evaluacion2NuevaNET.csproj.GenerateResource.cache
+C:\Users\Nicolás\source\repos\Evaluacion2NuevaNET\obj\Debug\Evaluacion2NuevaNET.csproj.CoreCompileInputs.cache
+C:\Users\Nicolás\source\repos\Evaluacion2NuevaNET\obj\Debug\Evaluacion2NuevaNET.exe
+C:\Users\Nicolás\source\repos\Evaluacion2NuevaNET\obj\Debug\Evaluacion2NuevaNET.pdb
+C:\Users\Nicolás\source\repos\Evaluacion2NuevaNET\obj\Debug\Evaluacion2NuevaNET.VntLogin.resources
+C:\Users\Nicolás\source\repos\Evaluacion2NuevaNET\obj\Debug\Evaluacion2NuevaNET.Vista.VntMenuPrincipal.resources
