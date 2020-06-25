@@ -31,9 +31,11 @@ namespace Evaluacion2NuevaNET.Vista
         {
             LINQVentasDataContext tblVentas = new LINQVentasDataContext();
             var ventas = from venta in tblVentas.Venta select venta;
+
+            //Hacer el LINQ con Producto
+
             Venta nuevaVenta = new Venta();
-            int fechaActual = Int32.Parse(DateTime.Now.Day.ToString() + DateTime.Now.Month.ToString());
-            MessageBox.Show(fechaActual.ToString());
+            nuevaVenta.fecha = Int32.Parse(DateTime.Now.Day.ToString() + DateTime.Now.Month.ToString() + DateTime.Now.Year.ToString());
             _gvVentas.DataSource = ventas;
             
 
