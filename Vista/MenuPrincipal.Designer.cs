@@ -49,14 +49,18 @@
             this._lblTotal = new System.Windows.Forms.Label();
             this._lblTotalAcml = new System.Windows.Forms.Label();
             this._gvVentas = new System.Windows.Forms.DataGridView();
+            this._gvProd = new System.Windows.Forms.DataGridView();
+            this._lblVentas = new System.Windows.Forms.Label();
+            this._lblPedidos = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this._gvVentas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._gvProd)).BeginInit();
             this.SuspendLayout();
             // 
             // _lblSpa
             // 
             this._lblSpa.AutoSize = true;
             this._lblSpa.Font = new System.Drawing.Font("Lucida Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._lblSpa.Location = new System.Drawing.Point(255, 25);
+            this._lblSpa.Location = new System.Drawing.Point(347, 29);
             this._lblSpa.Name = "_lblSpa";
             this._lblSpa.Size = new System.Drawing.Size(204, 32);
             this._lblSpa.TabIndex = 0;
@@ -76,7 +80,7 @@
             // 
             this._lblBebidas.AutoSize = true;
             this._lblBebidas.Font = new System.Drawing.Font("Lucida Sans", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._lblBebidas.Location = new System.Drawing.Point(446, 81);
+            this._lblBebidas.Location = new System.Drawing.Point(638, 81);
             this._lblBebidas.Name = "_lblBebidas";
             this._lblBebidas.Size = new System.Drawing.Size(89, 24);
             this._lblBebidas.TabIndex = 2;
@@ -96,7 +100,7 @@
             // 
             this._lblCntBebidas.AutoSize = true;
             this._lblCntBebidas.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._lblCntBebidas.Location = new System.Drawing.Point(447, 119);
+            this._lblCntBebidas.Location = new System.Drawing.Point(639, 119);
             this._lblCntBebidas.Name = "_lblCntBebidas";
             this._lblCntBebidas.Size = new System.Drawing.Size(78, 18);
             this._lblCntBebidas.TabIndex = 4;
@@ -125,14 +129,14 @@
             // 
             // _txbBebInd
             // 
-            this._txbBebInd.Location = new System.Drawing.Point(471, 146);
+            this._txbBebInd.Location = new System.Drawing.Point(664, 146);
             this._txbBebInd.Name = "_txbBebInd";
             this._txbBebInd.Size = new System.Drawing.Size(23, 20);
             this._txbBebInd.TabIndex = 8;
             // 
             // _txbBebFam
             // 
-            this._txbBebFam.Location = new System.Drawing.Point(471, 172);
+            this._txbBebFam.Location = new System.Drawing.Point(664, 172);
             this._txbBebFam.Name = "_txbBebFam";
             this._txbBebFam.Size = new System.Drawing.Size(23, 20);
             this._txbBebFam.TabIndex = 9;
@@ -171,7 +175,7 @@
             // 
             this._lblBebInd.AutoSize = true;
             this._lblBebInd.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._lblBebInd.Location = new System.Drawing.Point(500, 149);
+            this._lblBebInd.Location = new System.Drawing.Point(692, 149);
             this._lblBebInd.Name = "_lblBebInd";
             this._lblBebInd.Size = new System.Drawing.Size(117, 15);
             this._lblBebInd.TabIndex = 13;
@@ -181,7 +185,7 @@
             // 
             this._lblBebFam.AutoSize = true;
             this._lblBebFam.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._lblBebFam.Location = new System.Drawing.Point(500, 176);
+            this._lblBebFam.Location = new System.Drawing.Point(692, 176);
             this._lblBebFam.Name = "_lblBebFam";
             this._lblBebFam.Size = new System.Drawing.Size(105, 15);
             this._lblBebFam.TabIndex = 14;
@@ -201,7 +205,7 @@
             // _btnCerrarCaja
             // 
             this._btnCerrarCaja.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._btnCerrarCaja.Location = new System.Drawing.Point(434, 278);
+            this._btnCerrarCaja.Location = new System.Drawing.Point(626, 278);
             this._btnCerrarCaja.Name = "_btnCerrarCaja";
             this._btnCerrarCaja.Size = new System.Drawing.Size(149, 44);
             this._btnCerrarCaja.TabIndex = 16;
@@ -213,7 +217,7 @@
             // 
             this._lblTotal.AutoSize = true;
             this._lblTotal.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._lblTotal.Location = new System.Drawing.Point(302, 243);
+            this._lblTotal.Location = new System.Drawing.Point(406, 247);
             this._lblTotal.Name = "_lblTotal";
             this._lblTotal.Size = new System.Drawing.Size(64, 22);
             this._lblTotal.TabIndex = 17;
@@ -223,7 +227,7 @@
             // 
             this._lblTotalAcml.AutoSize = true;
             this._lblTotalAcml.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._lblTotalAcml.Location = new System.Drawing.Point(372, 243);
+            this._lblTotalAcml.Location = new System.Drawing.Point(474, 247);
             this._lblTotalAcml.Name = "_lblTotalAcml";
             this._lblTotalAcml.Size = new System.Drawing.Size(22, 22);
             this._lblTotalAcml.TabIndex = 18;
@@ -232,17 +236,48 @@
             // _gvVentas
             // 
             this._gvVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this._gvVentas.Location = new System.Drawing.Point(13, 372);
+            this._gvVentas.Location = new System.Drawing.Point(12, 383);
             this._gvVentas.Name = "_gvVentas";
-            this._gvVentas.Size = new System.Drawing.Size(679, 209);
+            this._gvVentas.Size = new System.Drawing.Size(447, 209);
             this._gvVentas.TabIndex = 19;
+            // 
+            // _gvProd
+            // 
+            this._gvProd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this._gvProd.Location = new System.Drawing.Point(471, 383);
+            this._gvProd.Name = "_gvProd";
+            this._gvProd.Size = new System.Drawing.Size(447, 209);
+            this._gvProd.TabIndex = 20;
+            // 
+            // _lblVentas
+            // 
+            this._lblVentas.AutoSize = true;
+            this._lblVentas.Font = new System.Drawing.Font("Lucida Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblVentas.Location = new System.Drawing.Point(12, 356);
+            this._lblVentas.Name = "_lblVentas";
+            this._lblVentas.Size = new System.Drawing.Size(87, 24);
+            this._lblVentas.TabIndex = 21;
+            this._lblVentas.Text = "Ventas:";
+            // 
+            // _lblPedidos
+            // 
+            this._lblPedidos.AutoSize = true;
+            this._lblPedidos.Font = new System.Drawing.Font("Lucida Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblPedidos.Location = new System.Drawing.Point(467, 356);
+            this._lblPedidos.Name = "_lblPedidos";
+            this._lblPedidos.Size = new System.Drawing.Size(97, 24);
+            this._lblPedidos.TabIndex = 22;
+            this._lblPedidos.Text = "Pedidos:";
             // 
             // VntMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(139)))), ((int)(((byte)(12)))));
-            this.ClientSize = new System.Drawing.Size(704, 593);
+            this.ClientSize = new System.Drawing.Size(930, 604);
+            this.Controls.Add(this._lblPedidos);
+            this.Controls.Add(this._lblVentas);
+            this.Controls.Add(this._gvProd);
             this.Controls.Add(this._gvVentas);
             this.Controls.Add(this._lblTotalAcml);
             this.Controls.Add(this._lblTotal);
@@ -268,6 +303,7 @@
             this.Text = "MenuPrincipal";
             this.Load += new System.EventHandler(this.VntMenuPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this._gvVentas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._gvProd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,5 +331,8 @@
         private System.Windows.Forms.Label _lblTotal;
         private System.Windows.Forms.Label _lblTotalAcml;
         private System.Windows.Forms.DataGridView _gvVentas;
+        private System.Windows.Forms.DataGridView _gvProd;
+        private System.Windows.Forms.Label _lblVentas;
+        private System.Windows.Forms.Label _lblPedidos;
     }
 }

@@ -52,6 +52,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LINQCajeros.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\LINQClientes.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LINQClientes.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\LINQProductos.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LINQProductos.dbml</DependentUpon>
+    </Compile>
     <Compile Include="Modelo\LINQVentas.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -93,6 +103,22 @@
     </None>
     <None Include="Modelo\LINQCajeros.dbml.layout">
       <DependentUpon>LINQCajeros.dbml</DependentUpon>
+    </None>
+    <None Include="Modelo\LINQClientes.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>LINQClientes.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Modelo\LINQClientes.dbml.layout">
+      <DependentUpon>LINQClientes.dbml</DependentUpon>
+    </None>
+    <None Include="Modelo\LINQProductos.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>LINQProductos.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Modelo\LINQProductos.dbml.layout">
+      <DependentUpon>LINQProductos.dbml</DependentUpon>
     </None>
     <None Include="Modelo\LINQVentas.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
