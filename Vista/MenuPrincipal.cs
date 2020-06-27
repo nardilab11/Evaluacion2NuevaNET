@@ -30,20 +30,24 @@ namespace Evaluacion2NuevaNET.Vista
 
         private void _btnAgregarPedido_Click(object sender, EventArgs e)
         {
-           
-            if (_txbPzInd.Text.Length == 0 || _txbPzMed.Text.Length == 0 || _txbPzFam.Text.Length == 0 || _txbBebInd.Text.Length == 0 || _txbBebFam.Text.Length == 0)
+            string cantPizInd = _txbPzInd.Text;
+            string cantPizMed = _txbPzMed.Text;
+            string cantPizFam = _txbPzFam.Text;
+            string cantBebInd = _txbBebInd.Text;
+            string cantBebFam = _txbBebFam.Text;
+            if (cantPizInd.Length == 0 || cantPizMed.Length == 0 || cantPizFam.Length == 0 || cantBebInd.Length == 0 || cantBebFam.Length == 0)
             { MessageBox.Show("Debe llenar todos los campos.", "Error"); }
             else 
             {
-                if (!(_txbPzInd.Text.All(char.IsDigit)) || !(_txbPzMed.Text.All(char.IsDigit)) || !(_txbPzFam.Text.All(char.IsDigit)) || !(_txbBebInd.Text.All(char.IsDigit)) || !(_txbBebFam.Text.All(char.IsDigit)))
+                if (!(cantPizInd.All(char.IsDigit)) || !(cantPizMed.All(char.IsDigit)) || !(cantPizFam.All(char.IsDigit)) || !(cantBebInd.All(char.IsDigit)) || !(cantBebFam.All(char.IsDigit)))
                 { MessageBox.Show("Los campos deben tener solo números.", "Error"); }
                 else
                 {
-                    if (_txbPzInd.Text.Length > 2 || _txbPzMed.Text.Length > 2 || _txbPzFam.Text.Length > 2 || _txbBebInd.Text.Length > 2 || _txbBebFam.Text.Length > 2)
+                    if (cantPizInd.Length > 2 || cantPizMed.Length > 2 || cantPizFam.Length > 2 || cantBebInd.Length > 2 || cantBebFam.Length > 2)
                     { MessageBox.Show("Cantidad mayor a 99 en uno de los campos.", "Cantidad Inválida"); }
                     else
                     {
-                        if ((_txbPzInd.Text != "0" && _txbPzMed.Text != "0") || (_txbPzInd.Text != "0" && _txbPzFam.Text != "0") || (_txbPzMed.Text != "0" && _txbPzFam.Text != "0"))
+                        if ((cantPizInd != "0" && cantPizMed != "0") || (cantPizInd != "0" && cantPizFam != "0") || (cantPizMed != "0" && cantPizFam != "0"))
                         { MessageBox.Show("Solo un tipo de pizza por pedido.", "Error");}
                         else
                         {
@@ -67,41 +71,42 @@ namespace Evaluacion2NuevaNET.Vista
                             string prodNombre = "";
                             float prodPrecio = 0;
                             int prodCant = 0;
-                            if (Int32.Parse(_txbPzInd.Text) > 0)
+                            if (Int32.Parse(cantPizInd) > 0)
                             {
                                 prodNombre = "Pizza Ind/";
-                                prodPrecio = 8000 * Int32.Parse(_txbPzInd.Text);
-                                prodCant = Int32.Parse(_txbPzInd.Text);
+                                prodPrecio = 8000 * Int32.Parse(cantPizInd);
+                                prodCant = Int32.Parse(cantPizInd);
                             }
-                            else if (Int32.Parse(_txbPzMed.Text) > 0)
+                            else if (Int32.Parse(cantPizMed) > 0)
                             {
                                 prodNombre = "Pizza Med/";
-                                prodPrecio = 12000 * Int32.Parse(_txbPzMed.Text);
-                                prodCant = Int32.Parse(_txbPzMed.Text);
+                                prodPrecio = 12000 * Int32.Parse(cantPizMed);
+                                prodCant = Int32.Parse(cantPizMed);
                             }
-                            else if (Int32.Parse(_txbPzFam.Text) > 0)
+                            else if (Int32.Parse(cantPizFam) > 0)
                             {
                                 prodNombre = "Pizza Fam/";
-                                prodPrecio = 22000 * Int32.Parse(_txbPzFam.Text);
-                                prodCant = Int32.Parse(_txbPzFam.Text);
+                                prodPrecio = 22000 * Int32.Parse(cantPizFam);
+                                prodCant = Int32.Parse(cantPizFam);
                             }
-                            if (Int32.Parse(_txbBebInd.Text) > 0)
+                            if (Int32.Parse(cantBebInd) > 0)
                             {
                                 prodNombre = prodNombre + "Bebida Ind/";
-                                prodPrecio = prodPrecio + (1500 * Int32.Parse(_txbBebInd.Text));
-                                prodCant = prodCant + Int32.Parse(_txbBebInd.Text);
+                                prodPrecio = prodPrecio + (1500 * Int32.Parse(cantBebInd));
+                                prodCant = prodCant + Int32.Parse(cantBebInd);
                             }
-                            if (Int32.Parse(_txbBebFam.Text) > 0)
+                            if (Int32.Parse(cantBebFam) > 0)
                             {
                                 prodNombre = prodNombre + "Bebida Fam";
-                                prodPrecio = prodPrecio + (5000 * Int32.Parse(_txbBebFam.Text));
-                                prodCant = prodCant + Int32.Parse(_txbBebFam.Text);
+                                prodPrecio = prodPrecio + (5000 * Int32.Parse(cantBebFam));
+                                prodCant = prodCant + Int32.Parse(cantBebFam);
                             }
                             nuevoProd.id = prodId;
                             nuevoProd.nombre = prodNombre;
                             nuevoProd.precio = prodPrecio;
                             nuevoProd.cantidad = prodCant;
 
+                            //Aumentar el total recaudado
                             this.totalAcum = this.totalAcum + prodPrecio;
                             _lblTotalAcml.Text = "$" + this.totalAcum.ToString();
 
